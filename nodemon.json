@@ -1,0 +1,22 @@
+{
+  "restartable": "rs",
+  "ignore": [
+    ".git",
+    "node_modules/**/node_modules",
+    "client/public"
+  ],
+  "execMap": {
+    "js": "clear && npm run pack & node --harmony ./server"
+  },
+  "events": {
+    "restart": "clear && npm run pack & echo 'Nodemon restarting...'"
+  },
+  "watch": [
+    "client/",
+    "server/"
+  ],
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "ext": "js json pcss styl css"
+}

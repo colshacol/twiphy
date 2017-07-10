@@ -1,0 +1,6 @@
+.TopBar {
+  display: row;
+  content-x: center;
+  content-y: center;
+  size: 50px 100%;
+}

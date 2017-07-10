@@ -1,0 +1,39 @@
+_justifyContentValues = center, start, end, flex-start, flex-end, left, right, baseline, space-between, space-around, stretch, inherit, initial, unset;
+// TODO: __alignItemsValues && __alignContentValues
+
+__flexRows = row, row-reverse;
+__flexColumns = column, column-reverse;
+
+display($which) {
+  if ($which is row) {
+    display: flex;
+    flex-direction: row;
+  } else if ($which is column) {
+    display: flex;
+    flex-direction: column;
+  } else {
+    display: $which;
+  }
+}
+
+// TODO: Invalidity handling.
+content-x(value) {
+  if (@flex-direction in __flexRows && value in _justifyContentValues) {
+    justify-content: value;
+  } else if (@flex-direction in __flexColumns) {
+    align-items: value;
+  } else {
+    INVALID: 'content-x: ' + value + '';
+  }
+}
+
+// TODO: Invalidity handling.
+content-y(value) {
+  if (@flex-direction in __flexRows) {
+    align-items: value;
+  } else if (@flex-direction in __flexColumns && value in _justifyContentValues) {
+    justify-content: value;
+  } else {
+    INVALID: 'content-y: ' + value + '';
+  }
+}
