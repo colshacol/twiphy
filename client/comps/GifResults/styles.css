@@ -1,0 +1,6 @@
+.GifResults {
+  display: column;
+  content-x: center;
+  size: 100%;
+  overflow-y: scroll;
+}

@@ -1,19 +1,29 @@
 :global div[twiphy-mount-point] {
   border-left: 1px solid #dad8de;
   position: absolute;
-  background: #efeef1;
+  left: 100%;
   size: 100%;
   z-index: 20;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  box-shadow: $shadow0;
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
   &:hover {
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    box-shadow: $shadow0-1;
   }
 }
 
-.App {
+:global .twiphy-frame {
+  size: 100%;
+  background: #efeef1;
+  position: relative;
   display: column;
   content-x: center;
-  content-y: flex-start;
-  size: 100%;
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+:global [twiphy-toggler] {
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }

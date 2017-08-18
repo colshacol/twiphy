@@ -2,5 +2,18 @@
   display: row;
   content-x: center;
   content-y: center;
-  size: 50px 100%;
+  size: 100% 50px;
+  background: #17141f;
+  box-shadow: $shadow0;
+  color: #ffffff;
+  position: relative;
+}
+
+.closer {
+  position: absolute;
+  right: 8px;
+  top: 0;
+  height: 100%;
+  display: column;
+  content-x: center;
 }

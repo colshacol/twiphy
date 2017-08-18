@@ -1,0 +1,7 @@
+[*.{js,json,css}]
+indent_style = space
+indent_size = 2
+
+[{.babelrc}]
+indent_style = space
+indent_size = 2

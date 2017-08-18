@@ -13,3 +13,6 @@
 1. Non-twiphy users see the twiphy-string and don't understand it.
 2. Fuck that.
 
+### Notes:
+1. Fuck linters.
+2. Praise Prettier.
