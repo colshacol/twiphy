@@ -1,8 +1,47 @@
 .Gif {
   width: 100%;
+  display: column;
+  position: relative;
 
-  img {
-    width: 100%;
-    margin: 0 auto;
+  &:hover {
+    .actions {
+      opacity: 1;
+    }
+  }
+}
+
+.image {
+  max-width: 100%;
+  position: relative;
+}
+
+.actions {
+  width: 100%;
+  position: absolute;
+  padding: 0 20px 20px;
+  display: row;
+  content-x: flex-end;
+  opacity: 0;
+  bottom: 0;
+  z-index: 1;
+  transition: opacity .12s;
+
+  button {
+    background: #6441a4;
+    color: #ffffff;
+    padding: 0 1rem;
+    transition: background .12s ease-in,color .12s ease-in,box-shadow .12s ease-in;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 3rem;
+    white-space: nowrap;
+    cursor: pointer;
+    font-family: inherit;
+    margin-left: 10px;
+
+    &:hover {
+      background: #7d5bbe;
+      text-decoration: none;
+    }
   }
 }

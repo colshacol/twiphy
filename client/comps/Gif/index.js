@@ -8,22 +8,16 @@ type Props = {
   num?: number,
 }
 
-export default (props: Props) => {
-  // const submitButton = document.querySelector('div.js-chat-buttons.chat-buttons-container.clearfix > button');
-  const newButton = window.chatSubmitButton.cloneNode(true);
-  newButton.innerText = 'Send';
-  newButton.style.position = 'absolute';
-  newButton.style.right = '16px';
-  newButton.style.bottom = '16px';
-
+const Gif = (props: Props) => {
   return (
-    <div styleName='Gif' style={{position: 'relative'}} onMouseDown={(e) => { if (e.target == newButton) {props.selectGif(props.src)}}} onMouseUp={(e) => { if (e.target == newButton) { props.sendGif() }; props.selectGif(props.src)}}>
-      <img src={props.src} alt='Twiphy Gif'/>
-      <span style={{display: 'none'}}>
-        {setTimeout(() => {
-          document.querySelector('img[src="' + props.src + '"][alt="Twiphy Gif"]').parentElement.appendChild(newButton)
-        }, 750)}
-      </span>
+    <div styleName='Gif'>
+        <img styleName='image' src={props.src} alt='Twiphy Gif' />
+        <div styleName='actions'>
+          <button>Bookmark</button>
+          <button>Send</button>
+        </div>
     </div>
   );
 };
+
+export default Gif;

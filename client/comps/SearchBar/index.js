@@ -8,7 +8,7 @@ type Props = {
   onChange: Function,
 }
 
-export default observer((props: Props) => {
+const SearchBar = observer((props: Props) => {
   return (
     <div styleName='SearchBar'>
       <input
@@ -20,3 +20,5 @@ export default observer((props: Props) => {
     </div>
   );
 });
+
+export default SearchBar;

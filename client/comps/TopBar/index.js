@@ -1,7 +1,11 @@
 import React from 'react';
 import './styles.css';
 
-export default (props: Object) => {
+type Props = {
+  handleClose: () => *
+};
+
+const TopBar = (props: Object) => {
   return (
     <div styleName='TopBar'>
       <p>twiphy</p>
@@ -11,3 +15,5 @@ export default (props: Object) => {
     </div>
   );
 };
+
+export default TopBar;
