@@ -10,6 +10,7 @@
 }
 
 .closer {
+  cursor: pointer;
   position: absolute;
   right: 8px;
   top: 0;
