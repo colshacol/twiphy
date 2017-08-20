@@ -1,6 +1,5 @@
 .Gif {
   width: 100%;
-  display: column;
   position: relative;
 
   &:hover {
@@ -13,6 +12,7 @@
 
 .image {
   max-width: 100%;
+  min-width: 100%;
   position: relative;
 }
 
