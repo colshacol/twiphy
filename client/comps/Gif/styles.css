@@ -6,6 +6,7 @@
   &:hover {
     .actions {
       opacity: 1;
+      background: linear-gradient(180deg, rgba(23, 20, 31, 0), rgba(23, 20, 31, 0.85));
     }
   }
 }
@@ -18,13 +19,14 @@
 .actions {
   width: 100%;
   position: absolute;
-  padding: 0 20px 20px;
+  padding: 20px;
   display: row;
   content-x: flex-end;
   opacity: 0;
   bottom: 0;
   z-index: 1;
   transition: opacity .12s;
+  background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0));
 
   button {
     background: #6441a4;
