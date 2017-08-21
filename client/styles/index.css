@@ -28,3 +28,13 @@
   justify-content: center;
   cursor: pointer;
 }
+
+:global [twiphy-injected-gif] {
+  padding: 12px;
+  display: column;
+  content-x: center;
+  img {
+    max-width: 90%;
+    min-width: 90%;
+  }
+}

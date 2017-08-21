@@ -14,8 +14,6 @@ const GifResults = observer((props: Props) => {
         <Gif
           key={gif.images.original.url}
           src={gif.images.original.url}
-          sendGif={props.sendGif}
-          selectGif={props.selectGif}
         />
       </For>
     </div>

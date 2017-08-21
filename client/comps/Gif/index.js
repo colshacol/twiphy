@@ -1,23 +1,29 @@
 import React from 'react';
+import { inject } from 'mobx-react';
 import './styles.css';
 
 type Props = {
-  longID?: string,
-  shortID?: string,
-  src?: string,
-  num?: number,
-}
-
-const Gif = (props: Props) => {
-  return (
-    <div styleName='Gif'>
-        <img styleName='image' src={props.src} alt='Twiphy Gif' />
-        <div styleName='actions'>
-          <button>Bookmark</button>
-          <button>Send</button>
-        </div>
-    </div>
-  );
+  src: string,
+  uiStore: Object,
+  gifStore: Object
 };
 
-export default Gif;
+const Gif = (props: Props) => {
+	const gifData = {
+		user: props.uiStore.user,
+		src: props.src,
+		time: String(Date.now()),
+	};
+
+	return (
+		<div styleName="Gif">
+			<img styleName="image" src={props.src} alt="Twiphy Gif" />
+			<div styleName="actions">
+				<button>Bookmark</button>
+        <button onClick={() => props.gifStore.sendGif(gifData)}>Send</button>
+			</div>
+		</div>
+	);
+};
+
+export default inject('gifStore', 'uiStore')(Gif);

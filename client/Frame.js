@@ -4,7 +4,7 @@ import { observable, action } from 'mobx';
 import { observer, Provider } from 'mobx-react';
 import { TopBar, SearchBar, GifResults } from './comps';
 import { getGifs } from './utils/api';
-import UIStore from './domain/UIStore';
+import UIStore from '@stores/UIStore';
 
 type Props = {
   children: any,
@@ -58,7 +58,7 @@ export default class Frame extends Component<void, Props, void> {
       <div className='twiphy-frame'>
         <TopBar handleClose={props.toggle} />
         <SearchBar value={this.searchValue} onChange={this.setSearchValue} />
-        <GifResults results={this.searchResults} sendGif={this.sendGif} selectGif={this.selectGif} />
+        <GifResults results={this.searchResults} />
         {props.children}
       </div>
     );

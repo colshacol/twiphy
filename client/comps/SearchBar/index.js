@@ -8,6 +8,11 @@ type Props = {
   onChange: Function,
 }
 
+// class SearchBarr {
+
+// }
+
+// TODO: Hold search input state here.
 const SearchBar = observer((props: Props) => {
   return (
     <div styleName='SearchBar'>
