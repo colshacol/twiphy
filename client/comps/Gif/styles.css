@@ -5,7 +5,7 @@
   &:hover {
     .actions {
       opacity: 1;
-      background: linear-gradient(180deg, rgba(23, 20, 31, 0), rgba(23, 20, 31, 0.85));
+      background: linear-gradient(180deg, rgba(23, 20, 31, 0), rgba(23, 20, 31, 0.5));
     }
   }
 }
@@ -19,7 +19,7 @@
 .actions {
   width: 100%;
   position: absolute;
-  padding: 20px;
+  padding: 20px 0;
   display: row;
   content-x: flex-end;
   opacity: 0;
@@ -45,5 +45,28 @@
       background: #7d5bbe;
       text-decoration: none;
     }
+  }
+}
+
+.bookmark-icon {
+  cursor: not-allowed;
+  margin-right: 24px;
+  filter: drop-shadow(rgba(0, 0, 0, 0.75) 1px 1px 8px);
+  transition: all 0.15s;
+  opacity: 0.25;
+  /* &:hover {
+    filter: drop-shadow(3px 2px 16px rgba(0,0,0,1));
+    transform: scale(1.07);
+  } */
+}
+
+.send-icon {
+  cursor: pointer;
+  margin-right: 24px;
+  filter: drop-shadow(rgba(0, 0, 0, 0.75) 1px 1px 8px);
+  transition: all 0.15s;
+  &:hover {
+    filter: drop-shadow(3px 2px 16px rgba(0,0,0,1));
+    transform: scale(1.07);
   }
 }

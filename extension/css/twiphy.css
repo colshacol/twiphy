@@ -95,7 +95,7 @@
 }
 ._styles-Gif:hover ._styles-actions {
   opacity: 1;
-  background: linear-gradient(180deg, rgba(23,20,31,0), rgba(23,20,31,0.85));
+  background: linear-gradient(180deg, rgba(23,20,31,0), rgba(23,20,31,0.5));
 }
 ._styles-image {
   max-width: 100%;
@@ -105,7 +105,7 @@
 ._styles-actions {
   width: 100%;
   position: absolute;
-  padding: 20px;
+  padding: 20px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -138,6 +138,31 @@
 ._styles-actions button:hover {
   background: #7d5bbe;
   text-decoration: none;
+}
+._styles-bookmark-icon {
+  cursor: not-allowed;
+  margin-right: 24px;
+  -webkit-filter: drop-shadow(rgba(0,0,0,0.75) 1px 1px 8px);
+          filter: drop-shadow(rgba(0,0,0,0.75) 1px 1px 8px);
+  transition: all 0.15s;
+  opacity: 0.25;
+/* &:hover {
+    filter: drop-shadow(3px 2px 16px rgba(0,0,0,1));
+    transform: scale(1.07);
+  } */
+}
+._styles-send-icon {
+  cursor: pointer;
+  margin-right: 24px;
+  -webkit-filter: drop-shadow(rgba(0,0,0,0.75) 1px 1px 8px);
+          filter: drop-shadow(rgba(0,0,0,0.75) 1px 1px 8px);
+  transition: all 0.15s;
+}
+._styles-send-icon:hover {
+  -webkit-filter: drop-shadow(3px 2px 16px #000);
+          filter: drop-shadow(3px 2px 16px #000);
+  -webkit-transform: scale(1.07);
+          transform: scale(1.07);
 }
 div[twiphy-mount-point] {
   border-left: 1px solid #dad8de;
