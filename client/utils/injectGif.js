@@ -13,8 +13,8 @@ export default (props) => {
   `)
 
   const shouldSync = !getElement('.more-messages-indicator.visible.js-chat-more-messages');
-  const room = document.querySelector('.scroll.chat-messages.js-chat-messages.hideTimestamps.hideModIcons.showAutoModActions > .tse-scroll-content > .tse-content .chat-display ul');
-  const scrollRoom = getElement('.scroll.chat-messages.js-chat-messages.hideTimestamps.hideModIcons.showAutoModActions > .tse-scroll-content');
+  const room = document.querySelector('.scroll.chat-messages.js-chat-messages > .tse-scroll-content > .tse-content .chat-display ul');
+  const scrollRoom = getElement('.scroll.chat-messages.js-chat-messages > .tse-scroll-content');
 
   room.innerHTML += `
     <div twiphy-injected-gif>
