@@ -1,6 +1,7 @@
 import React from 'react';
 
 import SettingsIcon from '@assets/settings.svg';
+import CloseIcon from '@assets/delete.svg';
 import './styles.css';
 
 type Props = {
@@ -10,11 +11,9 @@ type Props = {
 const TopBar = (props: Object) => {
   return (
     <div styleName='TopBar'>
-      <SettingsIcon width={24} height={24}/>
-      <p>twiphy</p>
-      <div styleName='closer' onClick={props.handleClose}>
-        <small>close</small>
-      </div>
+      <SettingsIcon styleName='settings-icon' width={16} height={16}/>
+      <p styleName='logo'>twiphy</p>
+      <CloseIcon onClick={props.handleClose} styleName='close-icon' width={12} height={12}/>
     </div>
   );
 };

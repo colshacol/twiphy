@@ -1,20 +1,25 @@
 .SearchBar {
   display: row;
   content-x: center;
+  content-y: center;
   size: 100% 35px;
   background: #ffffff;
+  padding: 0 16px;
+  box-shadow: $shadow0;
+  z-index: 10;
 }
 
 .input {
-  size: 100%;
-  padding: 0 32px;
   outline: none;
   border: none;
-  box-shadow: $shadow0;
-  z-index: 10;
-
+  size: 100%;
   &:focus {
     outline: none;
     border: none;
   }
+}
+
+.search-icon {
+  opacity: 0.25;
+  transform: rotateY(180deg);
 }

@@ -1,17 +1,39 @@
 .TopBar {
   display: row;
-  content-x: center;
+  content-x: space-between;
   content-y: center;
   size: 100% 50px;
   background: #17141f;
   box-shadow: $shadow0;
   color: #ffffff;
   position: relative;
+  padding: 0 12px;
+}
+
+.logo {
+
+}
+
+.icon {
+  opacity: 0.5;
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.settings-icon {
+  @extends .icon;
+}
+
+.close-icon {
+  @extends .icon;
 }
 
 .closer {
   cursor: pointer;
-  position: absolute;
+
   right: 8px;
   top: 0;
   height: 100%;
