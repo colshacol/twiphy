@@ -1,5 +1,4 @@
 import { createDomNode, getElement } from './elements';
-import UIStore from '@stores/UIStore';
 
 export default (props) => {
   const gifEl = createDomNode(`
@@ -12,10 +11,11 @@ export default (props) => {
     </div>
   `)
 
-  const shouldSync = !getElement('.more-messages-indicator.visible.js-chat-more-messages');
-  const room = document.querySelector('.scroll.chat-messages.js-chat-messages > .tse-scroll-content > .tse-content .chat-display ul');
-  const scrollRoom = getElement('.scroll.chat-messages.js-chat-messages > .tse-scroll-content');
+  const shouldSync = !getElement((window.location.href.includes('go.twitch.tv')) ? '.chat-list__more-messages' : '.more-messages-indicator.visible.js-chat-more-messages');
+  const room = document.querySelector(window.location.href.includes('go.twitch.tv') ? '.chat-list__lines' : '.scroll.chat-messages.js-chat-messages > .tse-scroll-content > .tse-content .chat-display ul');
+  const scrollRoom = getElement((window.location.href.includes('go.twitch.tv')) ? '.chat-list' : '.scroll.chat-messages.js-chat-messages > .tse-scroll-content');
 
+  console.warn({ shouldSync, room, scrollRoom })
   room.innerHTML += `
     <div twiphy-injected-gif>
       <div twiphy-gif-info>
@@ -26,10 +26,5 @@ export default (props) => {
     </div>
   `;
 
-  // console.log(UIStore.chatRoom);
-
-  shouldSync && (scrollRoom.scrollTop = 99999);
-
-
-  // room.lastChild.insertBefore(gifEl, room.lastChild.nextSibling);
+  shouldSync && (room.scrollTop = 99999);
 }

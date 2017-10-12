@@ -6,13 +6,12 @@ import './styles.css';
 
 type Props = {
 	src: string,
-	uiStore: Object,
-	gifStore: Object
+	store: Object
 };
 
 const Gif = (props: Props) => {
 	const gifData = {
-		user: props.uiStore.user,
+		user: props.store.userData,
 		src: props.src,
 		time: String(Date.now())
 	};
@@ -33,4 +32,4 @@ const Gif = (props: Props) => {
 	);
 };
 
-export default inject('gifStore', 'uiStore')(Gif);
+export default inject('store')(Gif);

@@ -9,10 +9,14 @@ import './styles/index.css';
 import { autorun } from 'mobx';
 // const containerQueries = require('cq-prolyfill')();
 import Firebase from './firebase';
+import MainStore from './MainStore';
 import { createDomNode, getElement } from '@utils';
 
+const rootSelector = (window.location.href.includes('go.twitch.tv'))
+  ? '.chat-line__status'
+  : '.scroll.chat-messages.js-chat-messages'
 
-waitForElement('.scroll.chat-messages.js-chat-messages').then(chatRoom => {
+waitForElement(rootSelector).then(chatRoom => {
 	getElement('div.chat-buttons-container').prepend(
 		createDomNode(`
       <span twiphy-toggler>
@@ -20,7 +24,7 @@ waitForElement('.scroll.chat-messages.js-chat-messages').then(chatRoom => {
       </span>
     `)
   );
-  
+
   const uiStore = new UIStore;
   uiStore.init();
 
@@ -30,7 +34,7 @@ waitForElement('.scroll.chat-messages.js-chat-messages').then(chatRoom => {
 	});
 
   ReactDOM.render(
-    <Provider gifStore={Firebase} uiStore={uiStore}>
+    <Provider store={new MainStore(uiStore)} uiStore={uiStore}>
       <Frame toggle={uiStore.toggleTwiphy} visible={uiStore.twiphyVisible} />
     </Provider>,
 		uiStore.mountPoint,
