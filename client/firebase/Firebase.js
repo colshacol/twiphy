@@ -1,6 +1,5 @@
 import { observable, action } from 'mobx';
 import firebase from './init';
-import UIStore from '@stores/UIStore';
 const roomName = window.location.pathname.match(/^\/(\w+)/)[1];
 const roomGifs = firebase.database().ref(`${roomName}/gifs`);
 import { injectGif } from '../utils';
@@ -23,7 +22,7 @@ type FirebaseGif = {
   time: string
 }
 
-export default {
+export default new class {
   sendGif(gif: FirebaseGif) {
     roomGifs.push(gif);
   }
