@@ -33957,13 +33957,13 @@ function useRouterHistory(createHistory) {
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+	value: true
 });
 exports.default = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _dec, _dec2, _dec3, _class, _desc, _value, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _class3, _temp;
+var _dec, _dec2, _dec3, _dec4, _class, _desc, _value, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _class3, _temp;
 
 var _reactRouter = __webpack_require__(260);
 
@@ -33992,13 +33992,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
 
 function _initDefineProp(target, property, descriptor, context) {
-  if (!descriptor) return;
-  Object.defineProperty(target, property, {
-    enumerable: descriptor.enumerable,
-    configurable: descriptor.configurable,
-    writable: descriptor.writable,
-    value: descriptor.initializer ? descriptor.initializer.call(context) : void 0
-  });
+	if (!descriptor) return;
+	Object.defineProperty(target, property, {
+		enumerable: descriptor.enumerable,
+		configurable: descriptor.configurable,
+		writable: descriptor.writable,
+		value: descriptor.initializer ? descriptor.initializer.call(context) : void 0
+	});
 }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -34008,182 +34008,193 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) {
-  var desc = {};
-  Object['ke' + 'ys'](descriptor).forEach(function (key) {
-    desc[key] = descriptor[key];
-  });
-  desc.enumerable = !!desc.enumerable;
-  desc.configurable = !!desc.configurable;
+	var desc = {};
+	Object['ke' + 'ys'](descriptor).forEach(function (key) {
+		desc[key] = descriptor[key];
+	});
+	desc.enumerable = !!desc.enumerable;
+	desc.configurable = !!desc.configurable;
 
-  if ('value' in desc || desc.initializer) {
-    desc.writable = true;
-  }
+	if ('value' in desc || desc.initializer) {
+		desc.writable = true;
+	}
 
-  desc = decorators.slice().reverse().reduce(function (desc, decorator) {
-    return decorator(target, property, desc) || desc;
-  }, desc);
+	desc = decorators.slice().reverse().reduce(function (desc, decorator) {
+		return decorator(target, property, desc) || desc;
+	}, desc);
 
-  if (context && desc.initializer !== void 0) {
-    desc.value = desc.initializer ? desc.initializer.call(context) : void 0;
-    desc.initializer = undefined;
-  }
+	if (context && desc.initializer !== void 0) {
+		desc.value = desc.initializer ? desc.initializer.call(context) : void 0;
+		desc.initializer = undefined;
+	}
 
-  if (desc.initializer === void 0) {
-    Object['define' + 'Property'](target, property, desc);
-    desc = null;
-  }
+	if (desc.initializer === void 0) {
+		Object['define' + 'Property'](target, property, desc);
+		desc = null;
+	}
 
-  return desc;
+	return desc;
 }
 
 function _initializerWarningHelper(descriptor, context) {
-  throw new Error('Decorating class property failed. Please ensure that transform-class-properties is enabled.');
+	throw new Error('Decorating class property failed. Please ensure that transform-class-properties is enabled.');
 }
 
 var Props = _flowRuntime2.default.type('Props', _flowRuntime2.default.object(_flowRuntime2.default.property('children', _flowRuntime2.default.any()), _flowRuntime2.default.property('visible', _flowRuntime2.default.boolean()), _flowRuntime2.default.property('toggle', _flowRuntime2.default.function())));
 
-var Frame = (_dec = _flowRuntime2.default.annotate(_flowRuntime2.default.class('Frame', _flowRuntime2.default.extends(_react.Component, _flowRuntime2.default.void(), Props, _flowRuntime2.default.void()), _flowRuntime2.default.property('searchValue', _flowRuntime2.default.string()), _flowRuntime2.default.property('searchResults', _flowRuntime2.default.array(_flowRuntime2.default.object())), _flowRuntime2.default.property('setSearchValue', _flowRuntime2.default.any()), _flowRuntime2.default.property('setSearchResults', _flowRuntime2.default.any()), _flowRuntime2.default.property('resetState', _flowRuntime2.default.any()), _flowRuntime2.default.property('selectGif', _flowRuntime2.default.any()), _flowRuntime2.default.property('sendGif', _flowRuntime2.default.any()), _flowRuntime2.default.property('close', _flowRuntime2.default.any()), _flowRuntime2.default.property('startSearchTimeout', _flowRuntime2.default.any()), _flowRuntime2.default.method('constructor', _flowRuntime2.default.param('args', _flowRuntime2.default.any())), _flowRuntime2.default.method('render', _flowRuntime2.default.param('_arg', _flowRuntime2.default.any())))), _dec2 = _flowRuntime2.default.decorate(_flowRuntime2.default.string()), _dec3 = _flowRuntime2.default.decorate(_flowRuntime2.default.array(_flowRuntime2.default.object())), _dec(_class = (0, _mobxReact.observer)(_class = (_class2 = (_temp = _class3 = function (_Component) {
-  _inherits(Frame, _Component);
+var Frame = (_dec = _flowRuntime2.default.annotate(_flowRuntime2.default.class('Frame', _flowRuntime2.default.extends(_react.Component, _flowRuntime2.default.void(), Props, _flowRuntime2.default.void()), _flowRuntime2.default.property('searchValue', _flowRuntime2.default.string()), _flowRuntime2.default.property('searchResults', _flowRuntime2.default.array(_flowRuntime2.default.object())), _flowRuntime2.default.property('setSearchValue', _flowRuntime2.default.any()), _flowRuntime2.default.property('setSearchResults', _flowRuntime2.default.any()), _flowRuntime2.default.property('resetState', _flowRuntime2.default.any()), _flowRuntime2.default.property('sendGif', _flowRuntime2.default.any()), _flowRuntime2.default.property('close', _flowRuntime2.default.any()), _flowRuntime2.default.property('startSearchTimeout', _flowRuntime2.default.any()), _flowRuntime2.default.method('constructor', _flowRuntime2.default.param('args', _flowRuntime2.default.any())), _flowRuntime2.default.method('render', _flowRuntime2.default.param('_arg', _flowRuntime2.default.any())))), _dec2 = (0, _mobxReact.inject)('gifStore'), _dec3 = _flowRuntime2.default.decorate(_flowRuntime2.default.string()), _dec4 = _flowRuntime2.default.decorate(_flowRuntime2.default.array(_flowRuntime2.default.object())), _dec(_class = _dec2(_class = (0, _mobxReact.observer)(_class = (_class2 = (_temp = _class3 = function (_Component) {
+	_inherits(Frame, _Component);
 
-  function Frame() {
-    var _ref,
-        _this2 = this;
+	function Frame() {
+		var _ref,
+		    _this2 = this;
 
-    _classCallCheck(this, Frame);
+		_classCallCheck(this, Frame);
 
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
+		for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+			args[_key] = arguments[_key];
+		}
 
-    var _this = _possibleConstructorReturn(this, (_ref = Frame.__proto__ || Object.getPrototypeOf(Frame)).call.apply(_ref, [this].concat(args)));
+		var _this = _possibleConstructorReturn(this, (_ref = Frame.__proto__ || Object.getPrototypeOf(Frame)).call.apply(_ref, [this].concat(args)));
 
-    _initDefineProp(_this, 'searchValue', _descriptor, _this);
+		_initDefineProp(_this, 'searchValue', _descriptor, _this);
 
-    _initDefineProp(_this, 'searchResults', _descriptor2, _this);
+		_initDefineProp(_this, 'searchResults', _descriptor2, _this);
 
-    _initDefineProp(_this, 'setSearchValue', _descriptor3, _this);
+		_initDefineProp(_this, 'setSearchValue', _descriptor3, _this);
 
-    _initDefineProp(_this, 'setSearchResults', _descriptor4, _this);
+		_initDefineProp(_this, 'setSearchResults', _descriptor4, _this);
 
-    _initDefineProp(_this, 'resetState', _descriptor5, _this);
+		_initDefineProp(_this, 'resetState', _descriptor5, _this);
 
-    _this.selectGif = function (url) {
-      insertTwiphyText(url);
-    };
+		_initDefineProp(_this, 'sendGif', _descriptor6, _this);
 
-    _this.sendGif = function () {
-      _this.close();
-    };
+		_initDefineProp(_this, 'close', _descriptor7, _this);
 
-    _this.close = function () {
-      _this.resetState();
-    };
+		_this.startSearchTimeout = function () {
+			var timeout = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+			return _flowRuntime2.default.annotate(function (value) {
+				var _valueType = _flowRuntime2.default.string();
 
-    _this.startSearchTimeout = function () {
-      var timeout = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
-      return _flowRuntime2.default.annotate(function (value) {
-        var _valueType = _flowRuntime2.default.string();
+				_flowRuntime2.default.param('value', _valueType).assert(value);
 
-        _flowRuntime2.default.param('value', _valueType).assert(value);
+				timeout && clearTimeout(timeout);
+				timeout = setTimeout(_asyncToGenerator(regeneratorRuntime.mark(function _callee() {
+					var gifs;
+					return regeneratorRuntime.wrap(function _callee$(_context) {
+						while (1) {
+							switch (_context.prev = _context.next) {
+								case 0:
+									_context.next = 2;
+									return (0, _api.getGifs)({ query: value });
 
-        timeout && clearTimeout(timeout);
-        timeout = setTimeout(_asyncToGenerator(regeneratorRuntime.mark(function _callee() {
-          var gifs;
-          return regeneratorRuntime.wrap(function _callee$(_context) {
-            while (1) {
-              switch (_context.prev = _context.next) {
-                case 0:
-                  _context.next = 2;
-                  return (0, _api.getGifs)({ query: value });
+								case 2:
+									gifs = _context.sent;
 
-                case 2:
-                  gifs = _context.sent;
+									_this.setSearchResults(gifs);
 
-                  _this.setSearchResults(gifs);
+								case 4:
+								case 'end':
+									return _context.stop();
+							}
+						}
+					}, _callee, _this2);
+				})), 750);
+			}, _flowRuntime2.default.function(_flowRuntime2.default.param('value', _flowRuntime2.default.string())));
+		}();
 
-                case 4:
-                case 'end':
-                  return _context.stop();
-              }
-            }
-          }, _callee, _this2);
-        })), 750);
-      }, _flowRuntime2.default.function(_flowRuntime2.default.param('value', _flowRuntime2.default.string())));
-    }();
+		_flowRuntime2.default.bindTypeParameters(_this, _flowRuntime2.default.void(), Props, _flowRuntime2.default.void());
 
-    _flowRuntime2.default.bindTypeParameters(_this, _flowRuntime2.default.void(), Props, _flowRuntime2.default.void());
+		return _this;
+	}
 
-    return _this;
-  }
+	_createClass(Frame, [{
+		key: 'render',
+		value: function render() {
+			var _ref3 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this,
+			    props = _ref3.props,
+			    state = _ref3.state;
 
-  _createClass(Frame, [{
-    key: 'render',
-    value: function render() {
-      var _ref3 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this,
-          props = _ref3.props,
-          state = _ref3.state;
+			return _react2.default.createElement(
+				'div',
+				{ className: 'twiphy-frame' },
+				_react2.default.createElement(_comps.TopBar, { handleClose: props.toggle }),
+				_react2.default.createElement(_comps.SearchBar, { value: this.searchValue, onChange: this.setSearchValue }),
+				_react2.default.createElement(_comps.GifResults, { results: this.searchResults, sendGif: this.sendGif }),
+				props.children
+			);
+		}
+	}]);
 
-      return _react2.default.createElement(
-        'div',
-        { className: 'twiphy-frame' },
-        _react2.default.createElement(_comps.TopBar, { handleClose: props.toggle }),
-        _react2.default.createElement(_comps.SearchBar, { value: this.searchValue, onChange: this.setSearchValue }),
-        _react2.default.createElement(_comps.GifResults, { results: this.searchResults }),
-        props.children
-      );
-    }
-  }]);
-
-  return Frame;
-}(_react.Component), _class3.propTypes = _flowRuntime2.default.propTypes(Props), _temp), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, 'searchValue', [_dec2, _mobx.observable], {
-  enumerable: true,
-  initializer: function initializer() {
-    return '';
-  }
-}), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, 'searchResults', [_dec3, _mobx.observable], {
-  enumerable: true,
-  initializer: function initializer() {
-    return [];
-  }
+	return Frame;
+}(_react.Component), _class3.propTypes = _flowRuntime2.default.propTypes(Props), _temp), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, 'searchValue', [_dec3, _mobx.observable], {
+	enumerable: true,
+	initializer: function initializer() {
+		return '';
+	}
+}), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, 'searchResults', [_dec4, _mobx.observable], {
+	enumerable: true,
+	initializer: function initializer() {
+		return [];
+	}
 }), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, 'setSearchValue', [_mobx.action], {
-  enumerable: true,
-  initializer: function initializer() {
-    var _this3 = this;
+	enumerable: true,
+	initializer: function initializer() {
+		var _this3 = this;
 
-    return function (_ref4) {
-      var value = _ref4.target.value;
+		return function (_ref4) {
+			var value = _ref4.target.value;
 
-      _this3.startSearchTimeout(value);
-      console.log('Frame:Frame:[anonymous@20]:', 'value', value);
+			_this3.startSearchTimeout(value);
+			console.log('Frame:Frame:[anonymous@22]:', 'value', value);
 
-      _this3.searchValue = value;
-    };
-  }
+			_this3.searchValue = value;
+		};
+	}
 }), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, 'setSearchResults', [_mobx.action], {
-  enumerable: true,
-  initializer: function initializer() {
-    var _this4 = this;
+	enumerable: true,
+	initializer: function initializer() {
+		var _this4 = this;
 
-    return _flowRuntime2.default.annotate(function (results) {
-      var _resultsType = _flowRuntime2.default.array();
+		return _flowRuntime2.default.annotate(function (results) {
+			var _resultsType = _flowRuntime2.default.array();
 
-      _flowRuntime2.default.param('results', _resultsType).assert(results);
+			_flowRuntime2.default.param('results', _resultsType).assert(results);
 
-      _this4.searchResults = results;
-    }, _flowRuntime2.default.function(_flowRuntime2.default.param('results', _flowRuntime2.default.array())));
-  }
+			_this4.searchResults = results;
+		}, _flowRuntime2.default.function(_flowRuntime2.default.param('results', _flowRuntime2.default.array())));
+	}
 }), _descriptor5 = _applyDecoratedDescriptor(_class2.prototype, 'resetState', [_mobx.action], {
-  enumerable: true,
-  initializer: function initializer() {
-    var _this5 = this;
+	enumerable: true,
+	initializer: function initializer() {
+		var _this5 = this;
 
-    return function () {
-      _this5.searchValue = '';
-      _this5.searchResults = [];
-      _UIStore2.default.chatInputBox.innerText = '';
-    };
-  }
-})), _class2)) || _class) || _class);
+		return function () {
+			_this5.searchValue = '';
+			_this5.searchResults = [];
+		};
+	}
+}), _descriptor6 = _applyDecoratedDescriptor(_class2.prototype, 'sendGif', [_mobx.action], {
+	enumerable: true,
+	initializer: function initializer() {
+		var _this6 = this;
+
+		return function (gifData) {
+			_this6.props.gifStore.sendGif(gifData);
+			_this6.close();
+		};
+	}
+}), _descriptor7 = _applyDecoratedDescriptor(_class2.prototype, 'close', [_mobx.action], {
+	enumerable: true,
+	initializer: function initializer() {
+		var _this7 = this;
+
+		return function () {
+			_this7.props.toggle();
+			_this7.resetState();
+		};
+	}
+})), _class2)) || _class) || _class) || _class);
 exports.default = Frame;
 
 /***/ }),
@@ -35036,7 +35047,7 @@ var Gif = _flowRuntime2.default.annotate(function Gif(props) {
 				height: 36,
 				className: '_styles-send-icon',
 				onClick: function onClick() {
-					return props.gifStore.sendGif(gifData);
+					return props.sendGif(gifData);
 				}
 			})
 		)
@@ -35056,6 +35067,10 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _dec, _class;
+
 var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
@@ -35072,25 +35087,47 @@ var _flowRuntime2 = _interopRequireDefault(_flowRuntime);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
 var Props = _flowRuntime2.default.type('Props', _flowRuntime2.default.object(_flowRuntime2.default.property('results', _flowRuntime2.default.ref('ObservableArray', _flowRuntime2.default.object()))));
 
-var GifResults = (0, _mobxReact.observer)(_flowRuntime2.default.annotate(function (props) {
-  var _propsType = Props;
+var GifResults = (_dec = _flowRuntime2.default.annotate(_flowRuntime2.default.class('GifResults', _flowRuntime2.default.extends(_react.Component), _flowRuntime2.default.method('render'))), _dec(_class = (0, _mobxReact.observer)(_class = function (_Component) {
+  _inherits(GifResults, _Component);
 
-  _flowRuntime2.default.param('props', _propsType).assert(props);
+  function GifResults() {
+    _classCallCheck(this, GifResults);
 
-  return _react2.default.createElement(
-    'div',
-    { className: '_styles-GifResults' },
-    props.results.map(function (gif, i) {
-      return _react2.default.createElement(_.Gif, {
-        key: gif.images.original.url,
-        src: gif.images.original.url
-      });
-    }, this)
-  );
-}, _flowRuntime2.default.function(_flowRuntime2.default.param('props', Props))));
+    return _possibleConstructorReturn(this, (GifResults.__proto__ || Object.getPrototypeOf(GifResults)).apply(this, arguments));
+  }
 
+  _createClass(GifResults, [{
+    key: 'render',
+    value: function render() {
+      var props = this.props,
+          state = this.state,
+          context = this.context;
+
+
+      return _react2.default.createElement(
+        'div',
+        { className: '_styles-GifResults' },
+        props.results.map(function (gif, i) {
+          return _react2.default.createElement(_.Gif, {
+            key: gif.images.original.url,
+            src: gif.images.original.url,
+            sendGif: props.sendGif
+          });
+        }, this)
+      );
+    }
+  }]);
+
+  return GifResults;
+}(_react.Component)) || _class) || _class);
 exports.default = GifResults;
 
 /***/ }),
