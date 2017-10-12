@@ -26,7 +26,7 @@ const Gif = (props: Props) => {
 					width={36}
 					height={36}
 					styleName="send-icon"
-					onClick={() => props.gifStore.sendGif(gifData)}
+					onClick={() => props.sendGif(gifData)}
 				/>
 			</div>
 		</div>
