@@ -9,6 +9,7 @@ import './styles/index.css';
 import { autorun } from 'mobx';
 // const containerQueries = require('cq-prolyfill')();
 import Firebase from './firebase';
+import RouteStore from '@stores/RouteStore';
 import MainStore from './MainStore';
 import { createDomNode, getElement } from '@utils';
 
@@ -34,7 +35,7 @@ waitForElement(rootSelector).then(chatRoom => {
 	});
 
   ReactDOM.render(
-    <Provider store={new MainStore(uiStore)} uiStore={uiStore}>
+    <Provider store={new MainStore(uiStore)} uiStore={uiStore} routeStore={new RouteStore}>
       <Frame toggle={uiStore.toggleTwiphy} visible={uiStore.twiphyVisible} />
     </Provider>,
 		uiStore.mountPoint,

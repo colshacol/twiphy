@@ -15,7 +15,9 @@ type Props = {
 @observer
 export default class Frame extends Component<void, Props, void> {
 	render({ props, state } = this) {
-		return (
+    const { routeStore } = props;
+    console.log(routeStore);
+    return (
 			<div className="twiphy-frame">
 				<TopBar handleClose={props.store.toggle} />
 				<SearchBar value={props.store.searchValue} onChange={props.store.setSearchValue} />

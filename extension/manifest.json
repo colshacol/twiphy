@@ -1,6 +1,6 @@
 {
   "name": "twiphy",
-  "version": "0.0.60",
+  "version": "0.0.61",
   "manifest_version": 2,
   "description": "I'ma put my GIF in ya.",
   "homepage_url": "https://twitch.tv/alien8thebunny",
@@ -22,7 +22,8 @@
         "*://*.twitch.tv/alien8thebunny",
         "*://*.twitch.tv/trismar365",
         "https://go.twitch.tv/alien8thebunny",
-        "https://go.twitch.tv/trismar365"
+        "https://go.twitch.tv/trismar365",
+        "*://*.multitwitch.tv/*"
       ]
     }
   ]
