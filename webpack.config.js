@@ -87,7 +87,8 @@ module.exports = {
 			'@styles': path.resolve(__dirname, 'client/styles'),
 			'@utils': path.resolve(__dirname, 'client/utils'),
       '@stores': path.resolve(__dirname, 'client/stores'),
-      '@assets': path.resolve(__dirname, 'client/assets')
+      '@assets': path.resolve(__dirname, 'client/assets'),
+      '@consts': path.resolve(__dirname, 'client/consts')
 		},
 		extensions: ['.js', '.styl', '.css', '.json'],
 		modules: [PATHS.modules]
