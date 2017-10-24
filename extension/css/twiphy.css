@@ -22,12 +22,14 @@
 }
 ._styles-icon,
 ._styles-settings-icon,
+._styles-search-icon,
 ._styles-close-icon {
   opacity: 0.5;
   transition: opacity 0.3s;
 }
 ._styles-icon:hover,
 ._styles-settings-icon:hover,
+._styles-search-icon:hover,
 ._styles-close-icon:hover {
   opacity: 1;
 }
@@ -98,8 +100,6 @@
   background: linear-gradient(180deg, rgba(23,20,31,0), rgba(23,20,31,0.5));
 }
 ._styles-image {
-  max-width: 100%;
-  min-width: 100%;
   position: relative;
 }
 ._styles-actions {
@@ -163,6 +163,22 @@
           filter: drop-shadow(3px 2px 16px #000);
   -webkit-transform: scale(1.07);
           transform: scale(1.07);
+}
+._styles-Settings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
 }
 div[twiphy-mount-point] {
   border-left: 1px solid #dad8de;

@@ -27,6 +27,10 @@
   @extends .icon;
 }
 
+.search-icon {
+  @extends .icon;
+}
+
 .close-icon {
   @extends .icon;
 }

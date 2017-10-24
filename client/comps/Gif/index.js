@@ -1,5 +1,5 @@
 import React from 'react';
-import { inject } from 'mobx-react';
+import { inject, observer } from 'mobx-react';
 import BookmarkIcon from '@assets/lover.svg';
 import SendIcon from '@assets/right-arrow.svg';
 import './styles.css';
@@ -10,11 +10,14 @@ type Props = {
 };
 
 const Gif = (props: Props) => {
+  const { store, settingsStore } = props;
 	const gifData = {
-		user: props.store.userData,
+		user: store.userData,
 		src: props.src,
 		time: String(Date.now())
-	};
+  };
+
+  const width = `${props.width}%` || `${settingsStore.gifWidth}%`;
 
 	return (
 		<div styleName="Gif">
@@ -32,4 +35,4 @@ const Gif = (props: Props) => {
 	);
 };
 
-export default inject('store')(Gif);
+export default inject('store', 'settingsStore')(observer(Gif));
