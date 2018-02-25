@@ -16,13 +16,17 @@
   ],
   "content_scripts": [
     {
-      "js": ["js/twiphy.js"],
-      "css": ["css/twiphy.css"],
+      "js": [
+        "js/twiphy.js"
+      ],
+      "css": [
+        "css/twiphy.css"
+      ],
       "matches": [
-        "*://*.twitch.tv/alien8thebunny",
-        "*://*.twitch.tv/trismar365",
-        "https://go.twitch.tv/alien8thebunny",
-        "https://go.twitch.tv/trismar365"
+        "*://*.twitch.tv/*",
+        "*://*.twitch.tv/*",
+        "https://go.twitch.tv/*",
+        "https://go.twitch.tv/*"
       ]
     }
   ]

@@ -2,7 +2,7 @@
   "name": "twiphy",
   "version": "0.0.4",
   "description": "Puttin' my GIFs all up in yo Twitch.",
-  "main": "index.js",
+  "main": "client/index.js",
   "author": "colshacol <colshacol@gmail.com>",
   "license": "MIT",
   "scripts": {

@@ -11,8 +11,9 @@ export default (props) => {
     </div>
   `)
 
+  const room = getElement('.tw-full-height.tw-flex-grow-1.tw-pd-b-1');
   const shouldSync = !getElement((window.location.href.includes('go.twitch.tv')) ? '.chat-list__more-messages' : '.more-messages-indicator.visible.js-chat-more-messages');
-  const room = document.querySelector(window.location.href.includes('go.twitch.tv') ? '.chat-list__lines' : '.scroll.chat-messages.js-chat-messages > .tse-scroll-content > .tse-content .chat-display ul');
+  // const room = document.querySelector(window.location.href.includes('go.twitch.tv') ? '.chat-list__lines' : '.scroll.chat-messages.js-chat-messages > .tse-scroll-content > .tse-content .chat-display ul');
   const scrollRoom = getElement((window.location.href.includes('go.twitch.tv')) ? '.chat-list' : '.scroll.chat-messages.js-chat-messages > .tse-scroll-content');
 
   console.warn({ shouldSync, room, scrollRoom })
